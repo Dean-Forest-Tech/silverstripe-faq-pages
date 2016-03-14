@@ -1,0 +1,28 @@
+{
+	"name": "ilateral/silverstripe-support",
+	"description": "A set of support pages and tools for technical websites including FAQ pages",
+	"keywords": [
+		"silverstripe",
+		"help",
+		"faq",
+		"support"
+	],
+	"type": "silverstripe-module",
+	"require": {
+		"silverstripe/cms": "^3.1.0",
+		"silverstripe/lumberjack": "~1.1",
+		"silverstripe/tagfield": "^1.0"
+	},
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
+			"name": "Mark Anderson",
+			"email": "info@ilateral.co.uk"
+		}
+	],
+	"extra": {
+        "installer-name": "support"
+    },
+	"minimum-stability": "dev",
+	"prefer-stable": true
+}
