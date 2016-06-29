@@ -10,6 +10,11 @@ class QandAPage extends Page {
 		'Feedback' => 'FeedbackItem'
 	);
 	
+	private static $defaults = array (
+		'ShowInMenus' => false,
+		'ShowInSearch' => false
+	);
+	
 	public function getCMSFields() {
         $fields = parent::getCMSFields();
         
