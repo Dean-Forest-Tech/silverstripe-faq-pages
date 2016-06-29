@@ -4,9 +4,9 @@
     <article>
         <h1>$Title</h1>
         <div class="content">$Content</div>
-        <% if $Children %>
+        <% if $AllChildren %>
 			<div class="qandas">
-				<% loop $Children.Sort('FeedbackScore',DESC) %>
+				<% loop $AllChildren.Sort('FeedbackScore',DESC) %>
 					<div class="qanda units-row row">
 						<div class="question col-md-6 unit-50">
 							<h2>$Title</h2>
