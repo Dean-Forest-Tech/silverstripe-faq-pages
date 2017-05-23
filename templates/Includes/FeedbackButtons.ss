@@ -1,6 +1,6 @@
 <div class="feedback-buttons">
 	<p>
-		<span class="small">Is this helpfull? &nbsp;</span>
+		<span class="small">Is this helpful? &nbsp;</span>
 		<span class="btn-group">
 			<% if $IsPositive %>
 				<a class="active disabled btn btn-success btn-green" href="#">
