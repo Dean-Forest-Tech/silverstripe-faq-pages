@@ -6,6 +6,10 @@ class QandAPage extends Page {
 	
 	private static $allowed_children = array();
 	
+	private static $db = array(
+		'FeedbackScore' => 'Int'
+	);
+
 	private static $has_many = array (
 		'Feedback' => 'FeedbackItem'
 	);
@@ -24,11 +28,11 @@ class QandAPage extends Page {
         return $fields;
 	}
 	
-	public function getFeedbackScore() {
+	public function setFeedbackScore() {
 		$pos = $this->Feedback()->Filter('IsPos',1);
 		$neg = $this->Feedback()->Filter('IsPos',0);
 		$score = $pos->count() - $neg->count();
-		return $score;
+		$this->FeedbackScore = $score;
 	}
 	
 	/*
@@ -57,8 +61,8 @@ class QandAPage extends Page {
 		)->First()) {
 			return true;
 		} else {
-			$cookie = Cookie::get('Support.feedback-'+$this->ID);
-			if($pos = $feedback->filter('IsPos',1)) {
+			$cookie = Cookie::get('Support.feedback-'.$this->ID);
+			if($cookie && $pos = $feedback->filter('IsPos',1)) {
 				foreach ($pos as $item) {
 					if (md5($item->ID) == $cookie) {
 						return true;
@@ -77,8 +81,8 @@ class QandAPage extends Page {
 		)->First()) {
 			return true;
 		} else {
-			$cookie = Cookie::get('Support.feedback-'+$this->ID);
-			if($pos = $feedback->filter('IsPos',0)) {
+			$cookie = Cookie::get('Support.feedback-'.$this->ID);
+			if($cookie && $pos = $feedback->filter('IsPos',0)) {
 				foreach ($pos as $item) {
 					if (md5($item->ID) == $cookie) {
 						return true;

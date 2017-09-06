@@ -48,6 +48,10 @@ class QandAPage_Controller extends Page_Controller {
 				Cookie::set('Support.feedback-'+$this->ID,$key);
 			}
 		}
+
+		$this->setFeedbackscore();
+		$this->write();
+		
 		return $this->redirectBack();
 
 	}
@@ -93,6 +97,9 @@ class QandAPage_Controller extends Page_Controller {
 				Cookie::set('Support.feedback-'+$this->ID,$key);
 			}
 		}
+
+		$this->setFeedbackscore();
+		$this->write();
 		
 		return $this->redirectBack();
 	}
