@@ -6,6 +6,10 @@ class FAQPage extends Page {
 		"QandAPage"
 	);
 
+	private static $extensions = array(
+		'Lumberjack',
+	);
+
 	public function getQuestions()
 	{
 		return QandAPage::get()->filter('ParentID',$this->ID);

@@ -2,6 +2,14 @@
 
 class QandAPage extends Page {
 	
+	/**
+     * @var bool
+     */
+	private static $can_be_root = false;
+	
+	/**
+     * @var bool
+     */
 	private static $show_in_sitetree = false;
 	
 	private static $allowed_children = array();
@@ -10,29 +18,49 @@ class QandAPage extends Page {
 		'FeedbackScore' => 'Int'
 	);
 
-	private static $has_many = array (
+	private static $has_many = array(
 		'Feedback' => 'FeedbackItem'
 	);
 	
-	private static $defaults = array (
+	private static $defaults = array(
 		'ShowInMenus' => false,
-		'ShowInSearch' => false
+		'FeedbackScore' => 0
 	);
+
+	public function Link($action = null) {
+		if ($action) {
+			return parent::Link($action);
+		} else {
+			return Controller::join_links(
+				$this->Parent()->Link(), 
+				'#'.$this->URLSegment
+			);
+		}
+	}
 	
 	public function getCMSFields() {
         $fields = parent::getCMSFields();
-        
+		
+		$fields->addFieldToTab(
+			'Root.Main',
+			ReadOnlyField::create('FeedbackScore')
+		);
+		
         $fields->removeByName('PositiveFeedback');
         $fields->removeByName('NegativeFeedback');
         
         return $fields;
 	}
 	
-	public function setFeedbackScore() {
-		$pos = $this->Feedback()->Filter('IsPos',1);
-		$neg = $this->Feedback()->Filter('IsPos',0);
+	public function updateFeedbackScore()
+	{
+		$feedback = $this->Feedback();
+		$pos = $feedback->Filter('IsPos',true);
+		$neg = $feedback->Filter('IsPos',false);
 		$score = $pos->count() - $neg->count();
 		$this->FeedbackScore = $score;
+		Debug::show($this->FeedbackScore);
+		Debug::show($score);
 	}
 	
 	/*

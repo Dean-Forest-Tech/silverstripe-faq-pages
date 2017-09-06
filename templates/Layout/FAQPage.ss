@@ -6,8 +6,8 @@
         <div class="content">$Content</div>
         <% if $Questions %>
 			<div class="qandas">
-				<% loop $Questions.Sort('FeedbackScore',DESC) %>
-					<div class="qanda units-row row">
+				<% loop $Questions.Sort('FeedbackScore','DESC') %>
+					<div id="$URLSegment" class="qanda units-row row">
 						<div class="question col-md-6 unit-50">
 							<h2>$Title</h2>
 							<% include FeedbackButtons %>

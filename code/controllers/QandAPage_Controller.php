@@ -22,7 +22,7 @@ class QandAPage_Controller extends Page_Controller {
 			$found->write();
 		} else {
 			// else use key
-			$cookie = Cookie::get('Support.feedback-'+$this->ID);
+			$cookie = Cookie::get('Support.feedback-'.$this->ID);
 			if ($cookie) {
 				foreach ($feedback as $item) {
 					if (md5($feedback->ID) == $cookie) {
@@ -45,15 +45,20 @@ class QandAPage_Controller extends Page_Controller {
 			
 			if (!$new_feedback->UserID) {
 				$key = md5($new_feedback->ID);
-				Cookie::set('Support.feedback-'+$this->ID,$key);
+				Cookie::set('Support.feedback-'.$this->ID,$key);
 			}
 		}
 
-		$this->setFeedbackscore();
-		$this->write();
-		
-		return $this->redirectBack();
+		$record = QandAPage::get()->byID($this->ID);
+		$record->writeToStage('Stage');		
 
+		$record->updateFeedbackScore();
+		$record->writeToStage('Stage');
+		$record->publish("Stage", "Live");
+		$record->doPublish();
+		Debug::show($record->FeedbackScore);	
+		
+		return $this->redirect($this->AbsoluteLink());
 	}
 	
 	/*
@@ -71,7 +76,7 @@ class QandAPage_Controller extends Page_Controller {
 			$found->write();
 		} else {
 			// else use key
-			$cookie = Cookie::get('Support.feedback-'+$this->ID);
+			$cookie = Cookie::get('Support.feedback-'.$this->ID);
 			if ($cookie) {
 				foreach ($feedback as $item) {
 					if (md5($feedback->ID) == $cookie) {
@@ -94,13 +99,19 @@ class QandAPage_Controller extends Page_Controller {
 			
 			if (!$new_feedback->UserID) {
 				$key = md5($new_feedback->ID);
-				Cookie::set('Support.feedback-'+$this->ID,$key);
+				Cookie::set('Support.feedback-'.$this->ID,$key);
 			}
 		}
 
-		$this->setFeedbackscore();
-		$this->write();
+		$record = $this->dataRecord;
+		$record->write();
 		
-		return $this->redirectBack();
+		$record->updateFeedbackScore();
+		$record->writeToStage('Stage');		
+		$record->publish("Stage", "Live");		
+		$record->doPublish();	
+		Debug::show($record->FeedbackScore);	
+		
+		return $this->redirect($this->AbsoluteLink());
 	}
 }
