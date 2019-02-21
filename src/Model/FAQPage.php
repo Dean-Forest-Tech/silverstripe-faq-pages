@@ -3,15 +3,16 @@
 namespace ilateral\SilverStripe\Support\Model;
 
 use Page;
+use SilverStripe\Lumberjack\Model\Lumberjack;
 
 class FAQPage extends Page {
 	
 	private static $allowed_children = array(
-		"QandAPage"
+		QandAPage::class
 	);
 
 	private static $extensions = array(
-		'Lumberjack',
+		Lumberjack::class
 	);
 
 	public function getQuestions()
