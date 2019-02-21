@@ -20,9 +20,6 @@
 			"email": "info@ilateral.co.uk"
 		}
 	],
-	"extra": {
-        "installer-name": "support"
-    },
 	"minimum-stability": "dev",
 	"prefer-stable": true,
     "autoload": {
