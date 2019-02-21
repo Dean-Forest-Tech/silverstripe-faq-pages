@@ -8,7 +8,6 @@
 		"faq",
 		"support"
 	],
-	"type": "silverstripe-module",
 	"require": {
 		"silverstripe/cms": "^4.0",
 		"silverstripe/lumberjack": "^2.0"
