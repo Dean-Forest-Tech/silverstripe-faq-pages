@@ -2,6 +2,7 @@
 
 namespace ilateral\SilverStripe\Support\Model;
 
+use Page;
 use SilverStripe\Control\Cookie;
 use SilverStripe\Security\Member;
 use SilverStripe\Control\Controller;

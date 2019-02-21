@@ -2,6 +2,8 @@
 
 namespace ilateral\SilverStripe\Support\Model;
 
+use Page;
+
 class FAQPage extends Page {
 	
 	private static $allowed_children = array(

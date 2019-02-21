@@ -2,6 +2,7 @@
 
 namespace ilateral\SilverStripe\Support\Control;
 
+use PageController;
 use SilverStripe\Dev\Debug;
 use SilverStripe\Control\Cookie;
 use SilverStripe\Security\Member;
@@ -9,7 +10,7 @@ use ilateral\SilverStripe\Support\Model\QandAPage;
 use ilateral\SilverStripe\Support\Model\FeedbackItem;
 
 
-class QandAPage_Controller extends Page_Controller {
+class QandAPage_Controller extends PageController {
 	
 	private static $allowed_actions = array(
 		'addPositive',

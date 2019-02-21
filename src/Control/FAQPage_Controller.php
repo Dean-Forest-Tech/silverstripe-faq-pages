@@ -2,6 +2,8 @@
 
 namespace ilateral\SilverStripe\Support\Control;
 
-class FAQPage_Controller extends Page_Controller {
+use PageController;
+
+class FAQPage_Controller extends PageController {
 	
 }

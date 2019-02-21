@@ -2,6 +2,8 @@
 
 namespace ilateral\SilverStripe\Support\Model;
 
+use SilverStripe\ORM\DataObject;
+
 class FeedbackItem extends DataObject {
 
 	private static $db = array(
