@@ -1,6 +1,7 @@
 {
 	"name": "ilateral/silverstripe-support",
 	"description": "A set of support pages and tools for technical websites including FAQ pages",
+	"type": "silverstripe-vendormodule",
 	"keywords": [
 		"silverstripe",
 		"help",
@@ -23,5 +24,10 @@
         "installer-name": "support"
     },
 	"minimum-stability": "dev",
-	"prefer-stable": true
+	"prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "ilateral\\SilverStripe\\Support\\": "src/"
+        }
+    }
 }

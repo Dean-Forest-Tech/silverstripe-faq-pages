@@ -1,5 +1,12 @@
 <?php
 
+namespace ilateral\SilverStripe\Support\Model;
+
+use SilverStripe\Control\Cookie;
+use SilverStripe\Security\Member;
+use SilverStripe\Control\Controller;
+use SilverStripe\Forms\ReadonlyField;
+
 class QandAPage extends Page {
 	
 	/**
@@ -43,7 +50,7 @@ class QandAPage extends Page {
 		
 		$fields->addFieldToTab(
 			'Root.Main',
-			ReadOnlyField::create('FeedbackScore')
+			ReadonlyField::create('FeedbackScore')
 		);
 		
         $fields->removeByName('PositiveFeedback');
@@ -59,8 +66,6 @@ class QandAPage extends Page {
 		$neg = $feedback->Filter('IsPos',false);
 		$score = $pos->count() - $neg->count();
 		$this->FeedbackScore = $score;
-		Debug::show($this->FeedbackScore);
-		Debug::show($score);
 	}
 	
 	/*
