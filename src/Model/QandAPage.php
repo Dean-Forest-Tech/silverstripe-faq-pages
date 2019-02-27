@@ -7,6 +7,7 @@ use SilverStripe\Control\Cookie;
 use SilverStripe\Security\Member;
 use SilverStripe\Control\Controller;
 use SilverStripe\Forms\ReadonlyField;
+use ilateral\SilverStripe\Support\Model\FeedbackItem;
 
 class QandAPage extends Page 
 {
@@ -29,7 +30,7 @@ class QandAPage extends Page
 	);
 
 	private static $has_many = array(
-		'Feedback' => 'FeedbackItem'
+		'Feedback' => FeedbackItem::class
 	);
 	
 	private static $defaults = array(

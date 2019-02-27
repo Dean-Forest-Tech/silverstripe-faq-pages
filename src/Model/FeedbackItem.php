@@ -3,6 +3,8 @@
 namespace ilateral\SilverStripe\Support\Model;
 
 use SilverStripe\ORM\DataObject;
+use SilverStripe\Security\Member;
+use ilateral\SilverStripe\Support\Model\QandAPage;
 
 class FeedbackItem extends DataObject 
 {
@@ -13,8 +15,8 @@ class FeedbackItem extends DataObject
 	);
 	
 	private static $has_one = array(
-		'User' => 'Member',
-		'Parent' => 'QandAPage'
+		'User' => Member::class,
+		'Parent' => QandAPage::class
 	);
 	
 }
