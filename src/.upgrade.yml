@@ -2,5 +2,5 @@ mappings:
   FAQPage: ilateral\SilverStripe\Support\Model\FAQPage
   QandAPage: ilateral\SilverStripe\Support\Model\QandAPage
   FeedbackItem: ilateral\SilverStripe\Support\Model\FeedbackItem
-  FAQPage_Controller: ilateral\SilverStripe\Support\Control\FAQPage_Controller
-  QandAPage_Controller: ilateral\SilverStripe\Support\Control\QandAPage_Controller
+  FAQPage_Controller: ilateral\SilverStripe\Support\Control\FAQPageController
+  QandAPage_Controller: ilateral\SilverStripe\Support\Control\QandAPageController

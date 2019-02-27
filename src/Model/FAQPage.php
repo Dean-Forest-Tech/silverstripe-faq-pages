@@ -5,8 +5,10 @@ namespace ilateral\SilverStripe\Support\Model;
 use Page;
 use SilverStripe\Lumberjack\Model\Lumberjack;
 
-class FAQPage extends Page {
-	
+class FAQPage extends Page 
+{
+	private static $table_name = 'FAQPage';
+		
 	private static $allowed_children = array(
 		QandAPage::class
 	);

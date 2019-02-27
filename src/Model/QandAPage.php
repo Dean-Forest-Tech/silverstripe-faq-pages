@@ -8,7 +8,9 @@ use SilverStripe\Security\Member;
 use SilverStripe\Control\Controller;
 use SilverStripe\Forms\ReadonlyField;
 
-class QandAPage extends Page {
+class QandAPage extends Page 
+{
+	private static $table_name = "QandAPage";
 	
 	/**
      * @var bool
