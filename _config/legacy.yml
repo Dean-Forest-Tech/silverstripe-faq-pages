@@ -1,0 +1,10 @@
+---
+Name: supportlegacy
+---
+SilverStripe\ORM\DatabaseAdmin:
+  classname_value_remapping:
+    FAQPage: ilateral\SilverStripe\Support\Model\FAQPage
+    QandAPage: ilateral\SilverStripe\Support\Model\QandAPage
+    FeedbackItem: ilateral\SilverStripe\Support\Model\FeedbackItem
+
+
