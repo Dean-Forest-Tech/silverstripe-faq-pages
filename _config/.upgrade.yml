@@ -1,0 +1,4 @@
+# List of tasks to run when running `upgrade-code`
+recipeEquivalences:
+  ilateral/silverstripe-support:
+    - i-lateral/silverstripe-support
