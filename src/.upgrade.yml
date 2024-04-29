@@ -1,6 +1,6 @@
 mappings:
-  FAQPage: ilateral\SilverStripe\Support\Model\FAQPage
-  QandAPage: ilateral\SilverStripe\Support\Model\QandAPage
-  FeedbackItem: ilateral\SilverStripe\Support\Model\FeedbackItem
-  FAQPage_Controller: ilateral\SilverStripe\Support\Control\FAQPageController
-  QandAPage_Controller: ilateral\SilverStripe\Support\Control\QandAPageController
+  FAQPage: DFT\SilverStripe\FAQPages\Model\FAQPage
+  QandAPage: DFT\SilverStripe\FAQPages\Model\QandAPage
+  FeedbackItem: DFT\SilverStripe\FAQPages\Model\FeedbackItem
+  FAQPage_Controller: DFT\SilverStripe\FAQPages\Control\FAQPageController
+  QandAPage_Controller: DFT\SilverStripe\FAQPages\Control\QandAPageController

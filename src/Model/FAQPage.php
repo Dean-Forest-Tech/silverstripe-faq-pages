@@ -1,6 +1,6 @@
 <?php
 
-namespace ilateral\SilverStripe\Support\Model;
+namespace DFT\SilverStripe\FAQPages\Model;
 
 use Page;
 use SilverStripe\Lumberjack\Model\Lumberjack;

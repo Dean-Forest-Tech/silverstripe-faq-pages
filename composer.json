@@ -22,7 +22,7 @@
 	"prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "ilateral\\SilverStripe\\Support\\": "src/"
+            "DFT\\SilverStripe\\FAQPages\\": "src/"
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace ilateral\SilverStripe\Support\Control;
+namespace DFT\SilverStripe\FAQPages\Control;
 
 use PageController;
 
