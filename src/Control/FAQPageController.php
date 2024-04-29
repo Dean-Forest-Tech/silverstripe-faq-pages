@@ -4,6 +4,5 @@ namespace DFT\SilverStripe\FAQPages\Control;
 
 use PageController;
 
-class FAQPageController extends PageController {
-	
-}
+class FAQPageController extends PageController
+{ }
