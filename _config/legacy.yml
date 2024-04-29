@@ -3,8 +3,11 @@ Name: supportlegacy
 ---
 SilverStripe\ORM\DatabaseAdmin:
   classname_value_remapping:
-    FAQPage: ilateral\SilverStripe\Support\Model\FAQPage
-    QandAPage: ilateral\SilverStripe\Support\Model\QandAPage
-    FeedbackItem: ilateral\SilverStripe\Support\Model\FeedbackItem
+    FAQPage: DFT\SilverStripe\FAQPages\Model\FAQPage
+    QandAPage: DFT\SilverStripe\FAQPages\Model\QandAPage
+    FeedbackItem: DFT\SilverStripe\FAQPages\Model\FeedbackItem
+    ilateral\SilverStripe\Support\Model\FAQPage: DFT\SilverStripe\FAQPages\Model\FAQPage
+    ilateral\SilverStripe\Support\Model\QandAPage: DFT\SilverStripe\FAQPages\Model\QandAPage
+    ilateral\SilverStripe\Support\Model\FeedbackItem: DFT\SilverStripe\FAQPages\Model\FeedbackItem
 
 

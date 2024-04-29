@@ -4,3 +4,8 @@ mappings:
   FeedbackItem: DFT\SilverStripe\FAQPages\Model\FeedbackItem
   FAQPage_Controller: DFT\SilverStripe\FAQPages\Control\FAQPageController
   QandAPage_Controller: DFT\SilverStripe\FAQPages\Control\QandAPageController
+  ilateral\SilverStripe\Support\Model\FAQPage: DFT\SilverStripe\FAQPages\Model\FAQPage
+  ilateral\SilverStripe\Support\Model\QandAPage: DFT\SilverStripe\FAQPages\Model\QandAPage
+  ilateral\SilverStripe\Support\Model\FeedbackItem: DFT\SilverStripe\FAQPages\Model\FeedbackItem
+  ilateral\SilverStripe\Support\Control\FAQPage_Controller: DFT\SilverStripe\FAQPages\Control\FAQPageController
+  ilateral\SilverStripe\Support\Control\QandAPage_Controller: DFT\SilverStripe\FAQPages\Control\QandAPageController
