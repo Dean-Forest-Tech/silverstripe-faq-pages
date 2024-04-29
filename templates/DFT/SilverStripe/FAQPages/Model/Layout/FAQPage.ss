@@ -10,7 +10,7 @@
 					<div id="$URLSegment" class="qanda units-row row">
 						<div class="question col-md-6 unit-50">
 							<h2>$Title</h2>
-							<% include FeedbackButtons %>
+							<% include DFT/SilverStripe/FAQPages/Includes/FeedbackButtons %>
 						</div>
 						<div class="answer col-md-6 unit-50">
 							$Content
