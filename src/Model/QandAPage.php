@@ -7,7 +7,6 @@ use SilverStripe\Control\Cookie;
 use SilverStripe\Security\Member;
 use SilverStripe\Control\Controller;
 use SilverStripe\Forms\ReadonlyField;
-use ilateral\SilverStripe\Support\Model\FeedbackItem;
 
 class QandAPage extends Page 
 {

@@ -4,7 +4,6 @@ namespace DFT\SilverStripe\FAQPages\Model;
 
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Security\Member;
-use ilateral\SilverStripe\Support\Model\QandAPage;
 
 class FeedbackItem extends DataObject 
 {
