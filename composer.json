@@ -1,7 +1,6 @@
 {
-	"name": "i-lateral/silverstripe-support",
-	"description": "A set of support pages and tools for technical websites including FAQ pages",
-	"type": "silverstripe-vendormodule",
+	"name": "dft/silverstripe-faq-pages",
+	"description": "Adds 'FAQ' pages (with questions, answers and 'was this helpful') to a SilverStripe CMS",
 	"keywords": [
 		"silverstripe",
 		"help",
@@ -15,8 +14,8 @@
 	"license": "BSD-3-Clause",
 	"authors": [
 		{
-			"name": "Mark Anderson",
-			"email": "info@ilateral.co.uk"
+			"name": "Dean Forest Tech",
+			"email": "dev@dean-forest-tech.uk"
 		}
 	],
 	"minimum-stability": "dev",
